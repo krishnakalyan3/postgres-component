@@ -41,7 +41,7 @@ class PostgreSQL(L.LightningWork):
 
         with open(f"/home/zeus/psql_{free_port}", "w") as f:
             proc = subprocess.Popen(
-                shlex.split(cmd1),
+                shlex.split(cmd1[0]),
                 bufsize=0,
                 close_fds=True,
                 stdout=f,
